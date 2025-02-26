@@ -255,23 +255,13 @@ class EndoNeRF_Dataset(object):
             else:
                 mask = 1 - np.array(mask) / 255.0
                 
-            # color
-            # color = (np.array(Image.open(self.image_paths[idx]))/255.0).astype(np.float32)
+           
             color = (np.array(Image.open(self.inp_paths[idx]))/255.0).astype(np.float32)
-            # depth
-            # depth_es = 1 / depth_es * 1000
-            #cutting
-            # depth_es = np.load(self.image_paths[idx].replace('inpainted_640_512_upsample', 'depth_dam').replace('png', 'npy'))
-            #pulling
-            # depth_es = np.load(self.image_paths[idx].replace('images', 'depth_dam').replace('png', 'npy'))
-            depth_es_inp = np.load(self.image_paths[idx].replace('images', 'depth_dam_inp').replace('png', 'npy')) 
+            depth_es_inp = np.load(self.inp_paths[idx].replace('images', 'depth_dam_inp').replace('png', 'npy')) 
             pc = None
-            # merge: depth_es && depth_es_inp && mask
-            # depth_merge = np.where(mask, depth_es, depth_es_inp)
             pc = None
             if idx == 0:
                 self.init_depth = depth_es_inp
-                # self.init_depth = depth_merge
                 self.init_img = color
                 self.init_mask = mask
                             
