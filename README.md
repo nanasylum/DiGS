@@ -1,5 +1,9 @@
 ## **DiGS: Diffusion-guided Gaussian Splatting for Dynamic Occlusion Surgical Scene Reconstruction**
 
+<video src="./img/compare.mp4"></video>
+
+### Architecture
+
 ![archV3](./img/archV3.png)
 
 ### Environments
