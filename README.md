@@ -2,7 +2,7 @@
 
 ### Architecture
 
-![archV3](./img/arch4.png)
+![arch](./img/arch.png)
 
 ### Environments
 
